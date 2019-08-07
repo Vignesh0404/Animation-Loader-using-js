@@ -1,0 +1,18 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+	background: url(1.jpg) no-repeat 50% 50%;
+	background-size:cover; 
+}
+
+#loader {
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	z-index: 1;
+	overflow: visible;
+	background: #000 url('loader.gif') no-repeat center center;
+}
+

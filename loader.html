@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Adding GIF as a loader</title>
+	<link rel="stylesheet" type="text/css" href="loader.css">
+</head>
+<body>
+	<div id="loader"></div>
+	<div id="content"></div>
+	<font size="10" face="helvetica" color="white"><b>How to use a gif as a loader for a website.</b></font>
+
+	<script type="text/javascript">
+		var loader;
+		function loadNow(opacity) {
+			if (opacity <=0) {
+				displayContent();
+			}
+			else {
+				loader.style.opacity = opacity;
+				window.setTimeout(function(){
+					loadNow(opacity - 0.05)
+				}, 100);
+			}
+		}
+
+		function displayContent() {
+			loader.style.display = 'none';
+			document.getElementById('content').style.display = 'block';
+		}
+
+		document.addEventListener("DOMContentLoaded", function(){
+			loader = document.getElementById('loader');
+			loadNow(4);
+		});
+	</script>
+
+</body>
+</html>
